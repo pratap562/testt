@@ -1,10 +1,10 @@
 
-// const { ObjectId } = require('bson')
+const { ObjectId } = require('bson')
 const mongoose = require('mongoose')
 
 const BookingModel = mongoose.model('booking', mongoose.Schema({
-    user: { required: true },
-    flight: { required: true }
+    user: { type: ObjectId, required: true },
+    flight: { type: ObjectId, required: true }
 }))
 
 module.exports = BookingModel
